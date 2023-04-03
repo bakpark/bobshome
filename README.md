@@ -1,3 +1,10 @@
+# bobshome
+---
+
+## 노션 Embeded
+- https://github.com/splitbee/notion-api-worker
+- https://github.com/splitbee/react-notion
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
