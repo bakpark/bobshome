@@ -1,4 +1,6 @@
 import React from 'react'
+import "react-notion/src/styles.css";
+import "prismjs/themes/prism-tomorrow.css";
 import { useState, useEffect } from 'react';
 import { BlockMapType, NotionRenderer } from "react-notion";
 

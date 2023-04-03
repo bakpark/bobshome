@@ -19,7 +19,7 @@
   padding: 1rem 0;
 }
 
-.main {
+.center_div {
   margin: 0 auto;
   max-width: 1400px; /* 원하는 최대 폭을 설정하세요. */
   display: flex;

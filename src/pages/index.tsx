@@ -11,7 +11,6 @@ export default function Home() {
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-                <script src="scripts.js" defer></script>
                 <title>bob's home</title>
             </Head>
             <header className={styles.header}>
@@ -30,7 +29,7 @@ export default function Home() {
                     </div>
                 </div>
             </header>
-            <main className={styles.main}>
+            <div className={styles.center_div}>
                 <aside className={styles.left_sidebar}>
                     <div className={styles.profile_picture}>
                         <img src="me.jpeg" alt="Profile picture"></img>
@@ -41,7 +40,7 @@ export default function Home() {
                     </div>
                 </aside>
                 <section className={styles.posts}>
-                    <NotionPost pageId="81e646d937ae4321a1d5fa80dbffd5f6"></NotionPost>
+                    <NotionPost pageId="cc7fafe8c7a64a1086b0ab1e99b8a528"></NotionPost>
                 </section>
                 <aside className={styles.right_sidebar}>
                     <ul className={styles.recent_posts}>
@@ -55,7 +54,7 @@ export default function Home() {
                         <p>오늘 방문자수 <span id={styles.today_visitors}></span></p>
                     </div>
                 </aside>
-            </main>
+            </div>
             <footer className={styles.footer}>
                 <p>© 2023 All rights reserved.</p>
             </footer>

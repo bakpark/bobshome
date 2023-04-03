@@ -97,36 +97,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  background: transparent;
-  padding: 1rem 0;
-  margin: 0 auto;
-  max-width: 1400px; /* 원하는 최대 폭을 설정하세요. */
-}  
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-}
-
-footer {
-  background: transparent;
-  color: #000;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-main {
-  margin: 0 auto;
-  max-width: 1400px; /* 원하는 최대 폭을 설정하세요. */
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
-  min-height: 100vh; /* main 영역의 최소 높이를 설정합니다. */
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
