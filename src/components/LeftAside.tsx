@@ -14,19 +14,19 @@ function LeftAsdie() {
                         <a href="https://github.com/bakpark" target="_blank" rel="noopener noreferrer">
                             <p>GitHub</p>
                         </a>
-                        <img src='github.svg' className={styles.icon_small} />
+                        <img src="/images/github.svg" className={styles.icon_small} />
                     </div>
                     <div className={styles.social_links_div}>
-                        <a href="https://github.com/bakpark" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/beomjun-park-728290181/" target="_blank" rel="noopener noreferrer">
                             <p>LinkedIn</p>
                         </a>
-                    <img src='linkedin.svg' className={styles.icon_small} />
+                        <img src="/images/linkedin.svg" className={styles.icon_small} />
                     </div>
                     <div className={styles.social_links_div}>
-                        <a href="https://github.com/bakpark" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/bakparkbj/" target="_blank" rel="noopener noreferrer">
                             <p>Instagram</p>
                         </a>
-                    <img src='instagram.svg' className={styles.icon_small} />
+                        <img src="/images/instagram.svg" className={styles.icon_small} />
                     </div>
                 </div>
             </div >

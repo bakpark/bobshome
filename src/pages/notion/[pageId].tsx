@@ -3,24 +3,25 @@ import { getPageTitle } from 'notion-utils'
 import notion from '@/lib/notion'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import NotionPage from '@/components/NotionPage';
-import { Post } from '@/components/NotionPage'
+import { Page } from '@/components/NotionPage'
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
     const pageId = context.query['pageId'] as string;
     console.log('pageId:', pageId)
 
     const recordMap = await notion.getPage(pageId)
-    const post = {
+    console.log('recordMap : ', recordMap)
+    const page: Page = {
         title: getPageTitle(recordMap),
         pageId: pageId,
         recordMap: recordMap
     }
 
-    return { props: { post } };
+    return { props: { page } };
 };
 
-export default function PostPage({ post }: { post: Post }) {
+export default function PostPage({ page }: { page: Page }) {
     return (
-        <NotionPage post={post}></NotionPage>
+        <NotionPage page={page}></NotionPage>
     );
 }

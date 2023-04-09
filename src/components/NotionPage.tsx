@@ -10,19 +10,19 @@ import styles from "@/styles/Post.module.css"
 import LeftAsdie from '@/components/LeftAside';
 import RightAside from '@/components/RightAside';
 
-export type Post = {
+export type Page = {
     title: string;
     pageId: string;
     recordMap: ExtendedRecordMap;
 };
 
-export const NotionPage = ({ post }: { post: Post }) => {
-    console.log('post', post)
-    if (!post.recordMap) {
+export const NotionPage = ({ page }: { page: Page }) => {
+    console.log('page', page)
+    if (!page.recordMap) {
         return null
     }
-    const title = getPageTitle(post.recordMap)
-    console.log(title, post.recordMap)
+    const title = getPageTitle(page.recordMap)
+    console.log(title, page.recordMap)
 
     return (
         <>
@@ -30,7 +30,7 @@ export const NotionPage = ({ post }: { post: Post }) => {
                 <div>
                     <div className={styles.header_banner}>
                         <div className={styles.title_container}>
-                            <h1>{post.title}</h1>
+                            <h1>{page.title}</h1>
                         </div>
                     </div>
                 </div>
@@ -38,11 +38,11 @@ export const NotionPage = ({ post }: { post: Post }) => {
                     <LeftAsdie />
                     <section className={styles.posts}>
                         <NotionRenderer
-                            recordMap={post.recordMap}
+                            recordMap={page.recordMap}
                             fullPage={true}
                             darkMode={false}
                             components={{ Code, Collection, Equation }}
-                            mapPageUrl={(pageId) => "/posts/" + pageId}
+                            mapPageUrl={(pageId) => "/notion/" + pageId}
                         />
                     </section>
                     <RightAside />
