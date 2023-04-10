@@ -7,10 +7,8 @@ import { Page } from '@/components/NotionPage'
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
     const pageId = context.query['pageId'] as string;
-    console.log('pageId:', pageId)
 
     const recordMap = await notion.getPage(pageId)
-    console.log('recordMap : ', recordMap)
     const page: Page = {
         title: getPageTitle(recordMap),
         pageId: pageId,
