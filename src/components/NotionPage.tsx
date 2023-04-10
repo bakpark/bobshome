@@ -17,12 +17,10 @@ export type Page = {
 };
 
 export const NotionPage = ({ page }: { page: Page }) => {
-    console.log('page', page)
     if (!page.recordMap) {
         return null
     }
     const title = getPageTitle(page.recordMap)
-    console.log(title, page.recordMap)
 
     return (
         <>
