@@ -1,25 +1,32 @@
-
 import NotionPage, { Page } from '@/components/NotionPage';
 import { host } from '@/lib/config';
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
-import { NotionPostResponse } from '../api/post/notion/[postSrc]';
+import * as notionTypes from 'notion-types';
+
+export interface NotionPostResponse {
+    postId: number,
+    title: string,
+    recordMap: notionTypes.ExtendedRecordMap
+}
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
     const pageId = context.query['pageId'] as string;
 
-    const res = await fetch(host + "/api/post/notion/" + pageId)
-    const resBody = await res.json() as NotionPostResponse
+    try {
+        const res = await fetch(host + "/api/post/notion/" + pageId)
+        const resBody = await res.json() as NotionPostResponse
 
-    if (resBody === null) {
-        return { props: {} }
-    }
-    const page: Page = {
-        title: resBody.title,
-        pageId: pageId,
-        recordMap: resBody.recordMap
-    }
+        const page: Page = {
+            title: resBody.title,
+            pageId: pageId,
+            recordMap: resBody.recordMap
+        }
 
-    return { props: { page } };
+        return { props: { page } };
+    } catch (e: any) {
+        console.log("host:", host, " error ", e.message)
+        throw e
+    }
 };
 
 export default function PostPage({ page }: { page: Page }) {

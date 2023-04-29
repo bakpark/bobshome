@@ -1,14 +1,9 @@
 import { PostType, createPost, getPostByTypeAndSrc, increaseVisitorCount } from '@/domain/post';
 import notion from '@/lib/notion';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as notionTypes from 'notion-types';
 import { getPageTitle } from 'notion-utils';
+import { NotionPostResponse } from '@/pages/notion/[pageId]';
 
-export interface NotionPostResponse {
-    postId: number,
-    title: string,
-    recordMap: notionTypes.ExtendedRecordMap
-}
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<NotionPostResponse>
