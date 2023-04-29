@@ -7,7 +7,6 @@ import { Page } from '@/components/NotionPage'
 import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-    console.log('root', rootNotionPageId)
     const recordMap = await notion.getPage(rootNotionPageId)
     const page = {
         title: getPageTitle(recordMap),
