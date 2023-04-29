@@ -12,4 +12,19 @@ body {
   line-height: 1.6;
   background-color: transparent;
   padding: 0 2rem; /* 좌우 패딩 추가 */
+  font-size: 14px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 12px; /* Set the base font size for tablet screens */
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 10px; /* Set the base font size for mobile screens */
+  }
 }

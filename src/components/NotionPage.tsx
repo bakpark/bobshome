@@ -7,7 +7,6 @@ import { Code } from 'react-notion-x/build/third-party/code'
 import { Collection } from 'react-notion-x/build/third-party/collection'
 import { Equation } from 'react-notion-x/build/third-party/equation'
 import styles from "@/styles/Post.module.css"
-import LeftAsdie from '@/components/LeftAside';
 import RightAside from '@/components/RightAside';
 
 export type Page = {
@@ -33,7 +32,6 @@ export const NotionPage = ({ page }: { page: Page }) => {
                     </div>
                 </div>
                 <div className={styles.center_div}>
-                    <LeftAsdie />
                     <section className={styles.posts}>
                         <NotionRenderer
                             recordMap={page.recordMap}
