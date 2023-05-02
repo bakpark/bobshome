@@ -26,4 +26,8 @@ jobs:
         SERVER_USER: ${{ secrets.MAC_AIR_USER}}
         SERVER_HOST: ${{ secrets.MAC_AIR_HOST}}
       run: |
-        ssh -i private_key -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST -p 23 "docker -d -p 3001:3000 run bakpark/bobshome:latest"
+        ssh -i private_key -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST -p 23 "\
+        /usr/local/bin/docker pull bakpark/bobshome:latest 
+        /usr/local/bin/docker stop bobshome-container 
+        /usr/local/bin/docker rm bobshome-container 
+        /usr/local/bin/docker run --name bobshome-container -d -p 3001:3000 bakpark/bobshome:latest"
