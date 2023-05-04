@@ -1,29 +1,23 @@
 name: Deploy to Macair
 on:
   workflow_run:
-    workflows: ["Docker Image CI"]
+    workflows: [ "Docker Image CI" ]
     types:
       - completed
 
 jobs:
-  # ... your existing jobs, like build and test
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Install SSH key
-      env:
-        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: |
-        echo "$PRIVATE_KEY" > private_key
-        chmod 600 private_key
-
-    - name: Deploy to Server
-      env:
-        SERVER_USER: ${{ secrets.MAC_AIR_USER}}
-        SERVER_HOST: ${{ secrets.MAC_AIR_HOST}}
-      run: |
-        ssh -i private_key -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_HOST "docker -d -p 3001:3000 run bakpark/bobshome:latest"
+      - name: SSH Remote Commands
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.MAC_AIR_HOST }}
+          username: bob
+          port: ${{ secrets.MAC_AIR_PORT }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            /usr/local/bin/docker pull bakpark/bobshome:latest 
+            /usr/local/bin/docker stop bobshome-container 
+            /usr/local/bin/docker rm bobshome-container 
+            /usr/local/bin/docker run --name bobshome-container -d -p 3001:3000 bakpark/bobshome:latest
