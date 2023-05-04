@@ -31,9 +31,20 @@ body {
 
   html,
   body {
-    font-size: 10px;
+    font-size: 11px;
     /* Set the base font size for mobile screens */
     padding: 0 0rem;
     /* 좌우 패딩 추가 */
+  }
+
+  .notion-collection {
+    align-self: self-start !important;
+  }
+  .notion-table-view{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .notion-table-cell{
+    font-size: 11px !important;
   }
 }

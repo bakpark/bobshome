@@ -7,7 +7,7 @@ import { Code } from 'react-notion-x/build/third-party/code'
 import { Collection } from 'react-notion-x/build/third-party/collection'
 import { Equation } from 'react-notion-x/build/third-party/equation'
 import styles from "@/styles/Post.module.css"
-import RightAside from '@/components/RightAside';
+import ContentsNavigator from '@/components/RightAside';
 
 export type Page = {
     title: string;
@@ -41,7 +41,7 @@ export const NotionPage = ({ page }: { page: Page }) => {
                             mapPageUrl={(pageId) => "/notion/" + pageId}
                         />
                     </section>
-                    <RightAside />
+                    <ContentsNavigator />
                 </div>
             </div>
         </>
