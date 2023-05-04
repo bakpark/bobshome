@@ -1,2 +1,2 @@
-export const rootNotionPageId = 'STUDY-067dd719a912471ea9a3ac10710e7fdf'
+export const rootNotionPageId = 'bob-s-home-3f133479833442c5b0e9493d3644d004'
 export const host = "http://127.0.0.1:3000"
