@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
                     <ul className={styles.menu}>
                         <li><Link href="/">홈</Link></li>
                         <li><Link href="/introduce">소개</Link></li>
-                        <li><Link href="/contact">연락처</Link></li>
                     </ul>
                 </nav>
             </header>

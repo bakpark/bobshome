@@ -1,7 +1,7 @@
-import LeftAsdie from "@/components/LeftAside";
+import Introduce from "@/components/Introduce";
 
 export default function IntroducePage() {
     return (
-        <LeftAsdie></LeftAsdie>
+        <Introduce></Introduce>
     );
 }

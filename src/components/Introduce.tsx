@@ -1,14 +1,15 @@
 import React from 'react'
 import styles from "@/styles/Introduce.module.css"
 
-function LeftAsdie() {
+function Introduce() {
     return (
-        <aside className={styles.left_sidebar}>
+        <div className={styles.introduce_card}>
             <div className={styles.profile_picture}>
                 <img src="../me.jpeg" alt="Profile picture"></img>
             </div>
             <div className={styles.greeting}>
                 <h2>박범준</h2>
+                <p>bakparkbj@gmail.com</p>
                 <div className={styles.social_links}>
                     <div className={styles.social_links_div}>
                         <a href="https://github.com/bakpark" target="_blank" rel="noopener noreferrer">
@@ -30,8 +31,8 @@ function LeftAsdie() {
                     </div>
                 </div>
             </div >
-        </aside >
+        </div >
     );
 }
 
-export default LeftAsdie;
+export default Introduce;

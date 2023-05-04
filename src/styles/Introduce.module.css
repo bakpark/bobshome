@@ -1,15 +1,15 @@
 /* left_sidebar에 대한 스타일을 추가합니다. */
-.left_sidebar {
+.introduce_card {
     flex: 0.5;
     background-color: #f0f0f0;
     /* 색상을 추가하여 영역을 확인하십시오. 필요에 따라 제거하세요. */
     padding: 1rem;
     position: sticky;
     /* 스크롤 시에도 따라다니도록 설정합니다. */
-    top: 1rem;
+    top: 10rem;
     /* 화면 상단과의 거리를 조절합니다. 원하는 값을 입력하세요. */
 }
-.left_sidebar h2 {
+.introduce_card h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }

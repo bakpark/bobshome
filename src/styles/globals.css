@@ -11,20 +11,29 @@ body {
   font-family: 'Noto Sans KR', Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
   line-height: 1.6;
   background-color: transparent;
-  padding: 0 2rem; /* 좌우 패딩 추가 */
+  padding: 0 2rem;
+  /* 좌우 패딩 추가 */
   font-size: 14px;
 }
 
 /* Media query for tablets */
 @media screen and (max-width: 1024px) {
-  html {
-    font-size: 12px; /* Set the base font size for tablet screens */
+
+  html,
+  body {
+    font-size: 12px;
+    /* Set the base font size for tablet screens */
   }
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 767px) {
-  html {
-    font-size: 10px; /* Set the base font size for mobile screens */
+
+  html,
+  body {
+    font-size: 10px;
+    /* Set the base font size for mobile screens */
+    padding: 0 0rem;
+    /* 좌우 패딩 추가 */
   }
 }
