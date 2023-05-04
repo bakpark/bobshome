@@ -1,29 +1,22 @@
 /* right_sidebar에 대한 스타일을 추가합니다. */
-.right_sidebar {
+.contents_navigator {
     flex: 0.5;
-    padding: 2rem;
-    border-radius: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-left: 2px solid rgb(30, 37, 39);
 }
 
-.right_sidebar h2 {
+.contents_navigator h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 /* 구분선을 추가하기 위한 스타일을 작성합니다. */
-.right_sidebar>*:not(:last-child) {
+.contents_navigator>*:not(:last-child) {
     border-bottom: 1px solid #ccc;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
-
-/* 구분선을 추가하기 위한 스타일을 작성합니다. */
-.left_sidebar>*:not(:first-child) {
-    border-top: 1px solid #ccc;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-}
-
 
 /* 방문자 정보 영역에 대한 스타일을 추가합니다. */
 .visitors {
@@ -31,19 +24,24 @@
     color: #333;
 }
 
-.recent_posts {
+.contents {
     list-style-type: none;
 }
 
-.recent_posts li {
+.contents li {
     margin-bottom: 0.5rem;
 }
 
-.recent_posts a {
+.contents a {
     color: #333;
     text-decoration: none;
 }
 
-.recent_posts a:hover {
+.contents a:hover {
     text-decoration: underline;
+}
+@media screen and (max-width: 960px) {
+    .contents_navigator{
+        align-self: flex-end;
+    }
 }

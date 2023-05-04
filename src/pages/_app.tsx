@@ -1,14 +1,23 @@
-import styles from "@/styles/Header.module.css"
-import Link from 'next/link'
+import styles from "@/styles/Header.module.css";
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
 import Head from "next/head";
-import type { AppProps } from 'next/app'
-import 'react-notion-x/src/styles.css'
-import '@/styles/globals.css'
+import Link from 'next/link';
+import NextNprogress from 'nextjs-progressbar';
+import 'react-notion-x/src/styles.css';
 
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
+            {/* Add the NextNprogress component */}
+            <NextNprogress
+                color="#29D" // Change the color of the progress bar
+                startPosition={0.3}
+                stopDelayMs={200}
+                height={3} // Change the height of the progress bar
+                options={{ easing: 'ease', speed: 500, showSpinner: true }}
+            />
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>bob&apos;s home</title>
